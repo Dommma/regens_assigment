@@ -6,6 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:badges/badges.dart' as badges;
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:get/get.dart';
 
 import '../widgets/dialog_widget.dart';
 
@@ -39,9 +40,10 @@ class HomeScreen extends ConsumerWidget {
                   badgeContent: Text(ref.watch(favoritesProvider).length.toString(), style: CustomTextStyle.badgeFont,),
                   child: IconButton(
                       onPressed: (){
-                        Navigator.push(
+                        Get.to(() => FavoriteScreen(), transition: Transition.rightToLeft, duration: const Duration(milliseconds: 300));
+                        /*Navigator.push(
                             context,
-                            MaterialPageRoute(builder: (context) => FavoriteScreen()));
+                            MaterialPageRoute(builder: (context) => FavoriteScreen()));*/
                       },
                       icon: const Icon(Icons.favorite))
               ),

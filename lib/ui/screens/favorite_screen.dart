@@ -1,6 +1,7 @@
 import 'package:assignment/ui/widgets/favorite_screen_body_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:get/get.dart';
 
 class FavoriteScreen extends ConsumerWidget {
 
@@ -12,7 +13,7 @@ class FavoriteScreen extends ConsumerWidget {
         leading: IconButton(
           icon: const Icon(Icons.arrow_back),
           onPressed: () {
-            Navigator.pop(context);
+            Get.back();
           },
         ),
       ),

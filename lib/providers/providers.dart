@@ -1,6 +1,5 @@
 import 'package:assignment/dtos/category_response.dart';
 import 'package:assignment/dtos/cocktails_response.dart';
-import 'package:assignment/models/cocktail_model.dart';
 import 'package:assignment/network/service.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
