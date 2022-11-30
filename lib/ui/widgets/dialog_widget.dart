@@ -12,24 +12,24 @@ class FilterDialogWidget extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    return SimpleDialog(title: Center(child: const Text("Select category")), children: [
+    return SimpleDialog(title: const Center(child: Text("Select category")), children: [
       Padding(
-        padding: EdgeInsets.only(left:20, right:20),
+        padding: const EdgeInsets.only(left:20, right:20),
         child: DecoratedBox(
           decoration: BoxDecoration(
             color: Theme.of(context).primaryColor,
               border: Border.all(color: Colors.black, width:2), //border of dropdown button
               borderRadius: BorderRadius.circular(10), //border raiuds of dropdown button
-              boxShadow: <BoxShadow>[ //apply shadow on Dropdown button
+              boxShadow: const <BoxShadow>[ //apply shadow on Dropdown button
                 BoxShadow(
                     color: Color.fromRGBO(0, 0, 0, 0.57), //shadow for button
                     blurRadius: 5) //blur radius of shadow
               ]
           ),
           child: Padding(
-            padding: EdgeInsets.only(left:20, right:20),
+            padding: const EdgeInsets.only(left:20, right:20),
             child: DropdownButton(
-              icon: Icon(Icons.arrow_drop_down, color: Colors.white,),
+              icon: const Icon(Icons.arrow_drop_down, color: Colors.white,),
               dropdownColor: Theme.of(context).primaryColor,
               style: CustomTextStyle.dropDownFont,
                 value: ref.watch(currectCategoryProvider).isNotEmpty

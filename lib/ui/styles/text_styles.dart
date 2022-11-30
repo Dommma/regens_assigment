@@ -15,4 +15,9 @@ class CustomTextStyle {
     color: Color(0xFFFFFFFF),
     fontWeight: FontWeight.bold
   );
+
+  static TextStyle get messageBoxFont => const TextStyle(
+      color: Color(0xFFFFFFFF),
+      fontSize: 20
+  );
 }

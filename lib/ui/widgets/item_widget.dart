@@ -13,7 +13,6 @@ class ItemWidget extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final favs = ref.watch(favoritesProvider);
-
     var cocktail = providerType==ProviderType.CATEGORY ? ref.read(getCocktailsByCategoryProvider).value!.cocktails[index] : ref.read(favoritesProvider)[index];
     return Stack(
       alignment: Alignment.bottomLeft,
@@ -56,9 +55,8 @@ class ItemWidget extends ConsumerWidget {
                       oldState.add(cocktail);
                     }
                     ref.read(favoritesProvider.notifier).state = oldState.toList();
-                    print("Fav length: ${favs.length}");
                   },
-                  icon: Icon(Icons.favorite, size: 30, color: checkFavoriteContains(favs, cocktail)? Colors.red : Color(0xFFFFFFFF),)
+                  icon: Icon(Icons.favorite, size: 30, color: checkFavoriteContains(favs, cocktail)? Colors.red : const Color(0xFFFFFFFF),)
               )
             ],
           ),

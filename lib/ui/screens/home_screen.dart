@@ -1,4 +1,3 @@
-import 'package:assignment/dtos/category_response.dart';
 import 'package:assignment/providers/providers.dart';
 import 'package:assignment/ui/screens/favorite_screen.dart';
 import 'package:assignment/ui/styles/text_styles.dart';
@@ -35,7 +34,7 @@ class HomeScreen extends ConsumerWidget {
                   icon: const Icon(Icons.filter_alt_outlined)),
               badges.Badge(
                   position: badges.BadgePosition.topEnd(top: 0, end: 3),
-                  animationDuration: Duration(milliseconds: 300),
+                  animationDuration: const Duration(milliseconds: 300),
                   animationType: badges.BadgeAnimationType.slide,
                   badgeContent: Text(ref.watch(favoritesProvider).length.toString(), style: CustomTextStyle.badgeFont,),
                   child: IconButton(
